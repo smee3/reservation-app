@@ -17,12 +17,11 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      // this.product = this.productService.getProductId(params.get('productId'));
       const productsObservable = this.productService.getProductId(params.get('productId'));
       productsObservable.subscribe(
         (data) => {
-        this.product = data;
-      },
+          this.product = data;
+        },
         (err) => {
 
         }

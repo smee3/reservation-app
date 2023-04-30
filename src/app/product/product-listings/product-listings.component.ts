@@ -17,8 +17,10 @@ export class ProductListComponent implements OnInit {
     productsObservable.subscribe(
       (data) => {
         this.products = data;
-    },
-      (err) => { console.error('次のエラーが発生しました: ' + err); }
+      },
+      (err) => {
+        console.error('次のエラーが発生しました: ' + err);
+      }
     );
   }
 
